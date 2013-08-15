@@ -3,16 +3,40 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "golib", "golib\golib.csproj", "{29C84978-AB94-4A3D-B4AD-58F41ACF69FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "golibTests", "golibTests\golibTests.csproj", "{E4488B9D-CC06-45BE-B6E7-7F36BFC34F9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{29C84978-AB94-4A3D-B4AD-58F41ACF69FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{29C84978-AB94-4A3D-B4AD-58F41ACF69FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C84978-AB94-4A3D-B4AD-58F41ACF69FF}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{29C84978-AB94-4A3D-B4AD-58F41ACF69FF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{29C84978-AB94-4A3D-B4AD-58F41ACF69FF}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{29C84978-AB94-4A3D-B4AD-58F41ACF69FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29C84978-AB94-4A3D-B4AD-58F41ACF69FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C84978-AB94-4A3D-B4AD-58F41ACF69FF}.Release|ARM.ActiveCfg = Release|Any CPU
+		{29C84978-AB94-4A3D-B4AD-58F41ACF69FF}.Release|x64.ActiveCfg = Release|Any CPU
+		{29C84978-AB94-4A3D-B4AD-58F41ACF69FF}.Release|x86.ActiveCfg = Release|Any CPU
+		{E4488B9D-CC06-45BE-B6E7-7F36BFC34F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4488B9D-CC06-45BE-B6E7-7F36BFC34F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4488B9D-CC06-45BE-B6E7-7F36BFC34F9E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E4488B9D-CC06-45BE-B6E7-7F36BFC34F9E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E4488B9D-CC06-45BE-B6E7-7F36BFC34F9E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E4488B9D-CC06-45BE-B6E7-7F36BFC34F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4488B9D-CC06-45BE-B6E7-7F36BFC34F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4488B9D-CC06-45BE-B6E7-7F36BFC34F9E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E4488B9D-CC06-45BE-B6E7-7F36BFC34F9E}.Release|x64.ActiveCfg = Release|Any CPU
+		{E4488B9D-CC06-45BE-B6E7-7F36BFC34F9E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
