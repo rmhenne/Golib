@@ -19,6 +19,9 @@ namespace golibTests
         {
             ds_sz = 19;
             ds_boardModel = new BoardModel(ds_sz);
+
+            Assert.IsTrue(BoardModelUtil.IsEmpty(ds_boardModel));
+
         }
 
 
@@ -27,9 +30,10 @@ namespace golibTests
         {
             Random rnd = new Random();
             CellState[] vals = new CellState[3];
+            const int numPoints = 10000;
 
 
-            for (int ii = 0; ii < 10000; ii++)
+            for (int ii = 0; ii < numPoints; ii++)
             {
                 int row = rnd.Next() % ds_sz + 1;
                 int col = rnd.Next() % ds_sz + 1;
@@ -46,6 +50,19 @@ namespace golibTests
 
         }
 
+
+        [TestMethod]
+        public void CheckClear()
+        {
+            BoardModelUtil.ClearBoard( ds_boardModel );
+            Assert.IsTrue(BoardModelUtil.IsEmpty(ds_boardModel));
+
+            BoardModelUtil.GenerateRandomConfiguration( 100, ds_boardModel);
+            Assert.IsFalse(BoardModelUtil.IsEmpty(ds_boardModel));
+
+            BoardModelUtil.ClearBoard(ds_boardModel);
+            Assert.IsTrue(BoardModelUtil.IsEmpty(ds_boardModel));
+        }
 
 
         [TestMethod]
