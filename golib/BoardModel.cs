@@ -79,6 +79,32 @@ namespace golib
         }
 
 
+        public static string CellStateToString(CellState cs)
+        {
+            switch (cs)
+            {
+                case CellState.WHITE:
+                    return "W";
+
+                case CellState.BLACK:
+                    return "B";
+
+                case CellState.EMPTY:
+                    return "E";
+
+                default:
+                    throw new InvalidProgramException();
+            }
+            
+        }
+
+        public static string GetCellLabel(BoardModel bm, int row, int col)
+        {
+            return CellStateToString(bm.GetCell(row, col)) + row + ":" + col;
+
+        }
+
+
     }
 
     public class BoardModel
@@ -121,6 +147,23 @@ namespace golib
             Util.RangeCheck(col, 1, width);
 
             return d_board[ToIndex(row),ToIndex(col)];
+        }
+
+        public Group GroupThatContainsStone(int row, int col)
+        {
+            if (d_board[ToIndex(row), ToIndex(col)] == CellState.EMPTY)
+            {
+                return null;
+            }
+            else
+            {
+                // Find lower left stone of group
+
+
+
+                Group gr = new Group(row, col, d_board[ToIndex(row), ToIndex(col)]);
+                return gr;
+            }
         }
 
         public int width { get { return d_size; } }

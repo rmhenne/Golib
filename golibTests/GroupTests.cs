@@ -19,8 +19,21 @@ namespace golibTests
         }
 
         [TestMethod]
-        public void TestMethod1()
+        public void GetGroups()
         {
+            ds_boardModel.SetCell(CellState.WHITE, 1, 1);
+            ds_boardModel.SetCell(CellState.WHITE, 1, 2);
+
+            Group gr = null;
+
+            gr = ds_boardModel.GroupThatContainsStone(2, 2);
+            Assert.IsNull(gr);
+
+            gr = ds_boardModel.GroupThatContainsStone(1, 1);
+
+            Assert.IsNotNull(gr);
+            Assert.IsTrue(gr.NumPieces() == 2);
+
         }
     }
 }

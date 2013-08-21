@@ -76,10 +76,15 @@ namespace golib
 
             foreach (var stone in d_members)
             {
-
+                
             }
 
 
+        }
+
+        public int NumPieces()
+        {
+            return d_members.Count;
         }
     }
 
